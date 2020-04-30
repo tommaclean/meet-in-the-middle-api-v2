@@ -16,11 +16,7 @@ class UsersController < ApplicationController
     end
 
     def profile
-        token = request.headers["Authorization"]
-        decoded_token = JWT.decode(token, 'pegasustaxfree', true, { algorithm: 'HS256'})
-        user_id = decoded_token[0]["user_id"]
-        user = User.find(user_id)
-        render json: user
+        render json: current_user
     end
 
     private
