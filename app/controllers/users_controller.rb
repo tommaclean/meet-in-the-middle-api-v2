@@ -7,9 +7,7 @@ class UsersController < ApplicationController
     def create
         user = User.create(user_params)
         if user.valid?
-            payload = { user_id: user.id }
-            token = JWT.encode(payload, 'pegasustaxfree', 'HS256')
-            render json: { token: token }
+            render json: { token: encode_token(user) }
         else
             render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
         end

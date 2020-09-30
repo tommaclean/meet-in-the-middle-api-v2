@@ -1,15 +1,12 @@
 class AuthController < ApplicationController
     def create
         user = User.find_by(username: params[:username])
-        is_authenticated = user.authenticate(params[:password])
+        is_authenticated = user.authenticate(params[:password]) if user
 
         if is_authenticated
-            payload = { user_id: user.id }
-            token = JWT.encode(payload, 'pegasustaxfree', 'HS256')
-            render json: { token: token }
+            render json: { token: encode_token(user) }
         else
             render json: { errors: ["Wrong username or password, sorry!"]}, status: :unprocessable_entity
         end
-
     end
 end
