@@ -1,11 +1,17 @@
 class FavMeetupsController < ApplicationController
     def index
-        @fav_meetups = FavMeetup.all
-        render json: @fav_meetups
+        # fav_meetups = FavMeetup.find_by(user: 4)
+        fav_meetups = FavMeetup.where(:user_id => 1)
+        render json: fav_meetups, include: [:meetup]
+    end
+
+    def show
+      fav_meetup = FavMeetup.find(params[:id])
+      render json: fav_meetup
     end
 
     def create
-        meetup = FavMeetup.new(fav_meetup_params)
+        fav_meetup = FavMeetup.new(fav_meetup_params)
         if fav_meetup.save
           render json: fav_meetup
         else
@@ -13,8 +19,10 @@ class FavMeetupsController < ApplicationController
         end
     end
 
+    private
 
     def fav_meetup_params
-    params.permit(:meetup, :user)
+      params.permit(:meetup_id, :user_id)
     end
+
 end
