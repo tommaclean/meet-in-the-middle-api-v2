@@ -19,6 +19,11 @@ class FavMeetupsController < ApplicationController
         end
     end
 
+    def destroy
+      @fav_meetup = FavMeetup.find(params[:id]) 
+      @fav_meetup.destroy 
+    end
+
     private
 
     def fav_meetup_params

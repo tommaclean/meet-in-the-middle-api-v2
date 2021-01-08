@@ -16,11 +16,11 @@ User.create([
 ])
 
 Meetup.create([
-    {creator: 1, location: 'Do or Dive Bar', address1: '81 Prospect St., Brooklyn, NY', address2: '45 Aberdeen St., Brooklyn, NY', address3: '220 Plymouth St., Brooklyn, NY'},
-    {creator: 2, location: 'Dynaco', address1: '81 Prospect St., Brooklyn, NY', address2: '45 Aberdeen St., Brooklyn, NY', address3: '220 Plymouth St., Brooklyn, NY'},
-    {creator: 3, location: 'Chavelas', address1: '81 Prospect St., Brooklyn, NY', address2: '45 Aberdeen St., Brooklyn, NY', address3: '220 Plymouth St., Brooklyn, NY'},
-    {creator: 4, location: 'Banhmigos', address1: '81 Prospect St., Brooklyn, NY', address2: '45 Aberdeen St., Brooklyn, NY', address3: '220 Plymouth St., Brooklyn, NY'},
-    {creator: 5, location: 'Bob & Bettys', address1: '81 Prospect St., Brooklyn, NY', address2: '45 Aberdeen St., Brooklyn, NY', address3: '220 Plymouth St., Brooklyn, NY'},
-    {creator: 6, location: 'Franklin Ave.', address1: '81 Prospect St., Brooklyn, NY', address2: '45 Aberdeen St., Brooklyn, NY', address3: '220 Plymouth St., Brooklyn, NY'}
+    {creator: 1, location: 'Do or Dive Bar', place_id: "ChIJAQCzoJZbwokReIATs2QEPWQ"},
+    {creator: 2, location: 'Dynaco', place_id: "ChIJ0Wca-7xbwokRFg1cpaHFp2c"},
+    {creator: 3, location: 'Chavelas', place_id: "ChIJAQCzoJZbwokReIATs2QEPWQ"},
+    {creator: 4, location: 'Banhmigos', place_id: "ChIJAQCzoJZbwokReIATs2QEPWQ"},
+    {creator: 5, location: 'Bob & Bettys', place_id: "ChIJAQCzoJZbwokReIATs2QEPWQ"},
+    {creator: 6, location: 'Franklin Ave.', place_id: "ChIJAQCzoJZbwokReIATs2QEPWQ"}
 ])
 
