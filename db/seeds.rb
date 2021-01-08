@@ -7,12 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create([
-    {name: 'Annie'},
-    {name: 'Tom'},
-    {name: 'Ozzy'},
-    {name: 'Frederick'},
-    {name: 'Lil Mama'},
-    {name: 'Eddo'},
+    {username: 'Annie', password:'123'},
+    {username: 'Tom', password:'123'},
+    {username: 'Ozzy', password:'123'},
+    {username: 'Frederick', password:'123'},
+    {username: 'Lil Mama', password:'123'},
+    {username: 'Eddo', password:'123'},
 ])
 
 Meetup.create([
