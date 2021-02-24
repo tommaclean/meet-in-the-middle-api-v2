@@ -1,6 +1,7 @@
 class AuthController < ApplicationController
     def create
         user = User.find_by(username: params[:username])
+        is_authenticated = nil
         is_authenticated = user.authenticate(params[:password]) if user
 
         if is_authenticated

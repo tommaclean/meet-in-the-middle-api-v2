@@ -1,7 +1,7 @@
 class User < ApplicationRecord
     has_secure_password
-    has_many :fav_meetups
     has_many :meetups, through: :meetups
+    has_many :fav_meetups, dependent: :destroy 
 
 
     # def fav_meetups
@@ -19,7 +19,3 @@ end
 
 
 
-# users         fav_meetups               meetups
-# 1, bob          1, 1                        1, 711
-# 2, tom          1, 2                        2, barnes&noble
-#                 2, 2
